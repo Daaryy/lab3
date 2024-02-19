@@ -1,10 +1,10 @@
 package interfaces;
 
+import exceptions.ConflictException;
 import objects.Obj;
-import objects.People;
 
 public interface Conflict {
-    void conflict(Obj obj, Obj obj1) ;
+    void conflict(Obj obj) throws ConflictException;
 
 
 }
