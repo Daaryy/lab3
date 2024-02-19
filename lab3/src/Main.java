@@ -21,12 +21,13 @@ public class Main {
         Ship ship= new Ship("Бдительная");
         ship.conflict(ship, jo);
         Water waves = new Water("Неизвестное море");
+         waves.rising();
         Water waves1 = new Water("Волны") {
-            public void rising(Water water) {
+            public void rising() {
                 System.out.println(name+" " + "колышутся");
             }
         };
-        waves1.rising(waves1);
+        waves1.rising();
 
         //System.out.println(t.equals(f));
 
