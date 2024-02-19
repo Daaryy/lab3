@@ -44,11 +44,27 @@ public class People extends Live implements Die, Conflict {
     public String getName() {
        return this.name;
     }
+        @Override
+    public void conflict(People object) throws ConflictException {
+        if (this.equals(object)) {
+            throw new ConflictException("Объект не может конфликтовать сам собой");
+        }
+        System.out.println(name + " конфликт произошел c " + object.name);
 
-    @Override
-    public void conflict(Obj obj, Obj obj1) {
 
     }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Live live = (Live) o;
+        return Objects.equals(name.toLowerCase(), live.name.toLowerCase());
+    }
+
+    @Override
+    public void conflict(Obj obj) throws ConflictException {
+
+ 
 
     @Override
     public void die() {
