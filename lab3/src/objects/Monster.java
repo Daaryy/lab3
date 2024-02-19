@@ -17,4 +17,6 @@ public class Monster extends Live implements Conflict, Die {
     public void die() {
         System.out.println("");
     }
+     public void harassment (){
+        System.out.println(name + " преследует" );
 }
