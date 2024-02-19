@@ -15,7 +15,7 @@ public class Main {
         jo.feeling(Condition.CONFUSION);
         jo.feeling(Condition.DETERMINATION);
         jo.feeling(Condition.TIRED);
-        jo.feeling(Condition.INSANITY);
+    
         Live t = new Live("name");
         Live f = new Live("name");
         Ship ship= new Ship("Бдительная");
