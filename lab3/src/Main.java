@@ -8,20 +8,19 @@ public class Main {
         People jo = new People("Йохансен", Gender.MALE, Nationality.NORVEGIAN);
         People br = new People("Брайден", Gender.MALE, Nationality.UNKNOWN);
         Monster monster= new Monster("Существо");
+        Water waves = new Water("Неизвестное море");
+        Ship ship= new Ship("Бдительная");
         monster.feeling(Condition.HUNGRY);
+        monster.harrasment();
+        waves.rising();
         br.feeling(Condition.MADNESS);
         br.feeling(Condition.FUN);
         jo.feeling(Condition.DESPAIR);
         jo.feeling(Condition.CONFUSION);
         jo.feeling(Condition.DETERMINATION);
-        jo.feeling(Condition.TIRED);
-    
-        Live t = new Live("name");
-        Live f = new Live("name");
-        Ship ship= new Ship("Бдительная");
+         Ship ship= new Ship("Бдительная");
         ship.conflict(ship, jo);
-        Water waves = new Water("Неизвестное море");
-         waves.rising();
+        jo.feeling(Condition.TIRED);
         Water waves1 = new Water("Волны") {
             public void rising() {
                 System.out.println(name+" " + "колышутся");
